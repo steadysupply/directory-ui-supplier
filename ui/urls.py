@@ -21,6 +21,9 @@ from enrolment.views import (
 from notifications.views import (
     AnonymousUnsubscribeView
 )
+from exportopportunity.views import (
+    SubmitExportOpportunityView
+)
 from ui.sitemaps import (
     SectorLandingPageSitemap,
     StaticViewSitemap,
@@ -120,5 +123,11 @@ urlpatterns = [
         r'^unsubscribe$',
         AnonymousUnsubscribeView.as_view(),
         name='anonymous-unsubscribe'
-    )
+    ),
+    url(
+        r'^export-opportunity$',
+        SubmitExportOpportunityView.as_view(),
+        name='export-opportunity'
+    ),
+
 ]

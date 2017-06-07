@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "enrolment",
     "company",
     "notifications",
+    "exportopportunity",
     "directory_constants",
     "captcha",
 ]
@@ -138,6 +139,9 @@ FEATURE_COMPANY_SEARCH_VIEW_ENABLED = (
 )
 FEATURE_INDUSTRIES_TRANSLATIONS_ENABLED = (
     os.getenv('FEATURE_INDUSTRIES_TRANSLATIONS_ENABLED') == 'true'
+)
+FEATURE_EXPORT_OPPORTUNITY_LEAD_GENERATION_ENABLED = (
+    os.getenv('FEATURE_EXPORT_OPPORTUNITY_LEAD_GENERATION_ENABLED') == 'true'
 )
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
