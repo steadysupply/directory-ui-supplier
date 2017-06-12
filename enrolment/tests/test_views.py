@@ -227,6 +227,7 @@ def test_lead_generation_view_submit_with_comment(
     mock_ticket_create, mock_user_create_or_update, buyer_request,
     buyer_form_data
 ):
+    buyer_request.LANGUAGE_CODE = 'en-gb'
     mock_user_create_or_update.return_value = Mock(id=999)
     response = LeadGenerationFormView.as_view()(buyer_request)
 
@@ -285,6 +286,28 @@ def test_international_landing_page_flag_off_advanced_manufacturing(settings):
     view = InternationalLandingSectorDetailView
 
     assert 'advanced-manufacturing' not in view.get_active_pages()
+
+
+def test_feedback_page_flag_on_translations(settings, client):
+    settings.FEATURE_INDUSTRIES_TRANSLATIONS_ENABLED = True
+
+    url = reverse('lead-generation')
+
+    response = client.get(url)
+
+    assert response.status_code == http.client.OK
+    assert 'language_switcher' in response.context_data
+
+
+def test_feedback_page_flag_off_translations(settings, client):
+    settings.FEATURE_INDUSTRIES_TRANSLATIONS_ENABLED = False
+
+    url = reverse('lead-generation')
+
+    response = client.get(url)
+
+    assert response.status_code == http.client.OK
+    assert 'language_switcher' not in response.context_data
 
 
 def test_industry_list_page_flag_on_translations(settings, client):
