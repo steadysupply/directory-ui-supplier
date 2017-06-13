@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-12 15:52+0000\n"
+"POT-Creation-Date: 2017-06-13 17:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,10 @@ msgid ""
 "The i-limb&trade; quantum is the next best thing to real hands and as a "
 "bilateral amputee having the ability to do what I want to do independently "
 "is truly remarkable."
+msgstr ""
+
+#: enrolment/constants.py:29
+msgid "Jason"
 msgstr ""
 
 #: enrolment/constants.py:30
@@ -160,6 +164,10 @@ msgstr ""
 msgid ""
 "If three-quarters of your gin and tonic is the tonic, make sure you use the "
 "best."
+msgstr ""
+
+#: enrolment/constants.py:210
+msgid "Tim Warrillow"
 msgstr ""
 
 #: enrolment/constants.py:215
@@ -318,7 +326,7 @@ msgstr ""
 
 #: enrolment/templates/bidi/header.html:29 enrolment/templates/header.html:41
 #: enrolment/templates/marketing-pages/base.html:121
-#: enrolment/templates/marketing-pages/bidi/base.html:114
+#: enrolment/templates/marketing-pages/bidi/base.html:111
 msgid "Industries"
 msgstr ""
 
@@ -601,6 +609,10 @@ msgstr ""
 #: enrolment/templates/marketing-pages/base.html:129
 #: enrolment/templates/marketing-pages/bidi/base.html:117
 msgid "keywords"
+msgstr ""
+
+#: enrolment/templates/marketing-pages/bidi/base.html:95
+msgid "case study"
 msgstr ""
 
 #: enrolment/templates/marketing-pages/creative.html:7
