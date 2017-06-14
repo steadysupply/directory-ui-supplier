@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-12 15:52+0000\n"
+"POT-Creation-Date: 2017-06-13 17:01+0000\n"
 "PO-Revision-Date: 2017-06-12 12:17+0100\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +34,10 @@ msgstr ""
 "Das i-limb™ quantum ist die nächstbeste Alternative zu echten Händen. Dass "
 "ich als beidseitig Amputierte die Möglichkeit habe, ohne Hilfe anderer das "
 "zu tun, was ich will, ist wirklich bemerkenswert."
+
+#: enrolment/constants.py:29
+msgid "Jason"
+msgstr ""
 
 #: enrolment/constants.py:30
 msgid "i-limb quantum&trade; user"
@@ -207,6 +211,10 @@ msgstr ""
 "Wenn drei Viertel Ihres Gin Tonics der Tonic sind, sollten Sie den besten "
 "nehmen."
 
+#: enrolment/constants.py:210
+msgid "Tim Warrillow"
+msgstr ""
+
 #: enrolment/constants.py:215
 #: enrolment/templates/bidi/landing-page-international-sector-list.html:88
 #: enrolment/templates/landing-page-international-sector-list.html:87
@@ -374,7 +382,7 @@ msgstr "Crown Copyright 2016"
 
 #: enrolment/templates/bidi/header.html:29 enrolment/templates/header.html:41
 #: enrolment/templates/marketing-pages/base.html:121
-#: enrolment/templates/marketing-pages/bidi/base.html:114
+#: enrolment/templates/marketing-pages/bidi/base.html:111
 msgid "Industries"
 msgstr "Branchen"
 
@@ -710,6 +718,12 @@ msgstr "Fallstudie lesen"
 msgid "keywords"
 msgstr "Stichwörter"
 
+#: enrolment/templates/marketing-pages/bidi/base.html:95
+#, fuzzy
+#| msgid "Read case study"
+msgid "case study"
+msgstr "Fallstudie lesen"
+
 #: enrolment/templates/marketing-pages/creative.html:7
 msgid "Delivering exceptional creative services"
 msgstr "Erbringung außergewöhnlicher kreativer Dienstleistungen"
@@ -789,16 +803,19 @@ msgstr ""
 "Dienstleistungen im Wert von 19,1 Mrd. GBP erbracht"
 
 #: enrolment/templates/marketing-pages/creative.html:37
+#, fuzzy, python-format
+#| msgid "9%% of all UK service exports are in the creative services in 2014"
 msgid "9%% of all UK service exports are in the creative services in 2014"
 msgstr ""
-"9 % aller britischen Exporte für Dienstleistungen im Jahr 2014 entfielen "
-"auf den kreativen Bereich"
+"9 % aller britischen Exporte für Dienstleistungen im Jahr 2014 entfielen auf "
+"den kreativen Bereich"
 
 #: enrolment/templates/marketing-pages/creative.html:38
+#, fuzzy, python-format
+#| msgid "Growth of creative services exports was 10.9%% in 2014"
 msgid "Growth of creative services exports was 10.9%% in 2014"
 msgstr ""
-"Das Exportwachstum für kreative Dienstleistungen im Jahr 2014 betrug "
-"10,9 %"
+"Das Exportwachstum für kreative Dienstleistungen im Jahr 2014 betrug 10,9 %"
 
 #: enrolment/templates/marketing-pages/creative.html:46
 msgid "Our creative digital experience"
@@ -868,8 +885,8 @@ msgid ""
 "UK architects are responsible for some of the world’s most stunning "
 "buildings, such as"
 msgstr ""
-"Britische Architekten sind für einige der atemberaubendsten Gebäude der "
-"Welt wie z. B."
+"Britische Architekten sind für einige der atemberaubendsten Gebäude der Welt "
+"wie z. B."
 
 #: enrolment/templates/marketing-pages/creative.html:69
 msgid "the Galaxy Soho urban village in Beijing"
@@ -1711,10 +1728,10 @@ msgid ""
 "intelligence (AI) start-up companies, especially those specialising in "
 "machine learning, deep learning and natural language processing"
 msgstr ""
-"Auch bei künstlicher Intelligenz sind wir führend, denn hier gibt es "
-"viele erfolgreiche AI-Start-up-Unternehmen (Artificial Intelligence – "
-"Künstliche Intelligenz), insbesondere für maschinelles Lernen, Deep "
-"Learning und Natural Language Processing (NLP)."
+"Auch bei künstlicher Intelligenz sind wir führend, denn hier gibt es viele "
+"erfolgreiche AI-Start-up-Unternehmen (Artificial Intelligence – Künstliche "
+"Intelligenz), insbesondere für maschinelles Lernen, Deep Learning und "
+"Natural Language Processing (NLP)."
 
 #: enrolment/templates/marketing-pages/tech.html:34
 msgid ""
@@ -1821,4 +1838,3 @@ msgid ""
 "Get access to the UK technology supply chain. Register to be notified as "
 "soon as companies that match your needs have created trade profiles."
 msgstr ""
-
