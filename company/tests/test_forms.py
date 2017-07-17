@@ -1,5 +1,7 @@
 from directory_validators.constants import choices
 
+import pytest
+
 from django.forms.fields import Field
 
 from company import forms, validators
@@ -141,3 +143,14 @@ def test_search_required_fields():
 
     assert form.fields['sector'].required is False
     assert form.fields['term'].required is False
+
+
+@pytest.mark.parametrize('input_value, output_value', [
+    ('food-and-drink', 'FOOD_AND_DRINK'),
+    ('aerospace', 'AEROSPACE'),
+])
+def test_search_seo_friendly_sector_value(input_value, output_value):
+    form = forms.CompanySearchForm(data={'term': '1', 'sector': input_value})
+
+    assert form.is_valid()
+    assert form.cleaned_data['sector'] == output_value

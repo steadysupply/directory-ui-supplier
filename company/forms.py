@@ -3,7 +3,7 @@ from directory_validators.constants import choices
 
 from django import forms
 
-from company import validators, widgets
+from company import fields, validators, widgets
 
 
 SELECT_LABEL = 'Please select your industry'
@@ -23,7 +23,7 @@ class CompanySearchForm(forms.Form):
         widget=forms.HiddenInput,
         initial=1,
     )
-    sector = forms.ChoiceField(
+    sector = fields.SeoFriendlyChoiceField(
         required=False,
         widget=forms.HiddenInput,
         choices=choices.COMPANY_CLASSIFICATIONS,
