@@ -130,7 +130,7 @@ def test_serialize_contact_company_form():
 def test_search_form():
     form = forms.CompanySearchForm(data={
         'term': '123',
-        'sector': 'AEROSPACE'
+        'sector': 'aerospace'
     })
 
     assert form.is_valid() is True
