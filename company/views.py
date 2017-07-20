@@ -1,4 +1,5 @@
 import http
+import logging
 
 import requests
 
@@ -14,6 +15,9 @@ from django.views.generic.edit import FormView
 
 from api_client import api_client
 from company import forms, helpers
+
+
+logger = logging.getLogger(__name__)
 
 
 class SubmitFormOnGetMixin:
@@ -224,6 +228,11 @@ class ContactCompanyView(FormView):
         if response.ok:
             template = self.success_template_name
         else:
+            logger.error(
+                "Enrolment failed, API response: {}".format(
+                    response.content
+                )
+            )
             template = self.failure_template_name
         context = self.get_context_data()
         return TemplateResponse(self.request, template, context)
