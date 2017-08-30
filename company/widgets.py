@@ -3,12 +3,13 @@ from django.utils.html import format_html, mark_safe
 
 
 class PreventRenderWidget(widgets.Input):
+
     attrs = {}
 
-    def render(name, value, attrs=None):
+    def render(self, name, value, attrs=None):
         return format_html('<!- not rendered ->')
 
-    def value_from_datadict(data, files, name):
+    def value_from_datadict(self, data, files, name):
         return data.get(name, None)
 
 
