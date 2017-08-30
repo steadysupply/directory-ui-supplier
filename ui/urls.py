@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import url
 from django.contrib.sitemaps.views import sitemap
-from django.views.generic import TemplateView
+from django import views as django_views
 
 from company.views import (
     CaseStudyDetailView,
@@ -43,7 +43,7 @@ urlpatterns = [
     ),
     url(
         r"^robots\.txt$",
-        TemplateView.as_view(
+        django_views.generic.TemplateView.as_view(
             template_name='robots.txt', content_type='text/plain'
         ),
         name='robots'
@@ -145,7 +145,7 @@ if settings.THUMBNAIL_STORAGE_CLASS_NAME == 'local-storage':
     urlpatterns += [
         url(
             r'^media/(?P<path>.*)$',
-            'django.views.static.serve',
+            django_views.static.serve,
             {'document_root': settings.MEDIA_ROOT}
         ),
     ]
