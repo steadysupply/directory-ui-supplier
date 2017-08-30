@@ -91,6 +91,7 @@ class ContactCompanyForm(forms.Form):
     terms = forms.BooleanField(
         error_messages={'required': TERMS_CONDITIONS_MESSAGE},
         widget=widgets.PreventRenderWidget,
+        label='',
     )
 
 
