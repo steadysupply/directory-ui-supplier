@@ -274,6 +274,8 @@ SECTOR_LINKS = helpers.parse_sector_links(os.environ['SECTOR_LINKS_JSON'])
 # Google Recaptcha
 RECAPTCHA_PUBLIC_KEY = os.environ['RECAPTCHA_PUBLIC_KEY']
 RECAPTCHA_PRIVATE_KEY = os.environ['RECAPTCHA_PRIVATE_KEY']
+# NOCAPTCHA = True turns on version 2 of recaptcha
+NOCAPTCHA = os.getenv('NOCAPTCHA') != 'false'
 
 # Google tag manager
 GOOGLE_TAG_MANAGER_ID = os.getenv('GOOGLE_TAG_MANAGER_ID', '')
@@ -288,6 +290,7 @@ ZENDESK_TICKET_SUBJECT = os.getenv(
     'ZENDESK_TICKET_SUBJECT', 'Trade Profiles feedback')
 
 # Sorl-thumbnail
+THUMBNAIL_FORMAT = os.getenv('THUMBNAIL_FORMAT', 'PNG')
 THUMBNAIL_STORAGE_CLASS_NAME = os.getenv('THUMBNAIL_STORAGE_CLASS_NAME', 's3')
 THUMBNAIL_KVSTORE_CLASS_NAME = os.getenv(
     'THUMBNAIL_KVSTORE_CLASS_NAME', 'redis'
