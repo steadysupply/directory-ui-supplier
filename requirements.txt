@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.ini
 #
--e git+https://github.com/steadysupply/directory-api-client.git@d46a121#egg=directory_api_client
+-e git+https://github.com/steadysupply/directory-api-client.git@dd69c34#egg=directory_api_client
 -e git+https://github.com/steadysupply/directory-constants.git@7ce7601#egg=directory_constants
 -e git+https://github.com/steadysupply/directory-validators.git@2014bd7#egg=directory_validators
 -e git+https://github.com/steadysupply/directory-signature-auth.git@7c5b118#egg=sigauth
