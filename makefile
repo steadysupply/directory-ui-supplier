@@ -19,6 +19,9 @@ CODECOV := \
 test:
 	$(COLLECT_STATIC) && $(COMPILE_TRANSLATIONS) && $(FLAKE8) && $(PYTEST) && $(CODECOV)
 
+bash:
+	$(COLLECT_STATIC) && $(COMPILE_TRANSLATIONS) && $(FLAKE8) && bash
+
 DJANGO_WEBSERVER := \
 	python manage.py collectstatic --noinput && \
 	python manage.py runserver 0.0.0.0:$$PORT
@@ -82,6 +85,13 @@ docker_debug: docker_remove_all
 
 docker_webserver_bash:
 	docker exec -it directoryui_webserver_1 sh
+
+docker-bash: docker_remove_all
+	$(DOCKER_SET_DEBUG_ENV_VARS) && \
+	$(DOCKER_COMPOSE_CREATE_ENVS) && \
+	$(DOCKER_COMPOSE_REMOVE_AND_PULL) && \
+	docker-compose -f docker-compose-test.yml build && \
+	docker-compose -f docker-compose-test.yml run sut docker/cmd-bash.sh
 
 docker_test: docker_remove_all
 	$(DOCKER_SET_DEBUG_ENV_VARS) && \

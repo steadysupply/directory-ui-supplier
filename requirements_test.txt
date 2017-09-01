@@ -4,10 +4,10 @@
 #
 #    pip-compile --output-file requirements_test.txt requirements_test.ini
 #
--e git+https://github.com/steadysupply/directory-api-client.git@master#egg=directory_api_client
--e git+https://github.com/steadysupply/directory-constants.git@master#egg=directory_constants
--e git+https://github.com/steadysupply/directory-validators.git@master#egg=directory_validators
--e git+https://github.com/steadysupply/directory-signature-auth.git@master#egg=sigauth
+-e git+https://github.com/steadysupply/directory-api-client.git@d46a121#egg=directory_api_client
+-e git+https://github.com/steadysupply/directory-constants.git@7ce7601#egg=directory_constants
+-e git+https://github.com/steadysupply/directory-validators.git@2014bd7#egg=directory_validators
+-e git+https://github.com/steadysupply/directory-signature-auth.git@7c5b118#egg=sigauth
 boto3==1.4.1
 botocore==1.4.93          # via boto3, s3transfer
 cachetools==2.0.0         # via zenpy
