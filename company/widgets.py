@@ -1,5 +1,5 @@
 from django.forms import widgets
-from django.utils.html import format_html, mark_safe
+from django.utils.html import format_html
 
 
 class PreventRenderWidget(widgets.Input):
@@ -13,27 +13,9 @@ class PreventRenderWidget(widgets.Input):
         return data.get(name, None)
 
 
-class CheckboxChoiceInputInlineLabel(widgets.CheckboxChoiceInput):
-    template = """
-        <div class="form-field checkbox">
-            {input_html}
-            <label for="{id}">{label}</label>
-        </div>
-    """
-
-    def render(self, name=None, value=None, attrs=None, choices=()):
-        attrs = dict(self.attrs, **attrs) if attrs else self.attrs
-        wrapper_html = self.template.format(
-            input_html=self.tag(attrs),
-            label=self.choice_label,
-            id=self.id_for_label
-        )
-        return mark_safe(wrapper_html)
-
-
-class CheckboxFieldInlineLabelRenderer(widgets.CheckboxFieldRenderer):
-    choice_input_class = CheckboxChoiceInputInlineLabel
-
-
 class CheckboxSelectInlineLabelMultiple(widgets.CheckboxSelectMultiple):
-    renderer = CheckboxFieldInlineLabelRenderer
+    option_template_name = 'widgets/checkbox_input_option.html'
+
+    def __init__(self, attrs=None, *args, **kwargs):
+        super().__init__(attrs=attrs, *args, **kwargs)
+        self.attrs['class'] = self.attrs.get('class', 'form-field checkbox')

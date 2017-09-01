@@ -974,19 +974,19 @@ input[type="color"],
 
   input:checked + label:after {
     content: "";
-    border-color: $mid-blue;
+    border-color: $grey-3;
     border-style: solid;
-    border-width: 0 0 3px 3px;
-    height: 6px;
-    left: 5px;
+    border-width: 0 0 5px 5px;
+    height: 10px;
+    left: 7px;
     position: absolute;
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 8px;
-    width: 16px;
+    top: 7px;
+    width: 21px;
     z-index: -1;
   }
 
@@ -996,13 +996,13 @@ input[type="color"],
 
   label:before {
     content: "";
-    border: 1px solid $grey-3;
+    border: 2px solid $grey-3;
     display: block;
-    height: 22px;
+    height: 34px;
     left: 0;
     position: absolute;
-    top: 1px;
-    width: 24px;
+    top: -3px;
+    width: 34px;
     z-index: -1;
   }
 }
