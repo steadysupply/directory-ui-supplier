@@ -4,10 +4,10 @@
 #
 #    pip-compile --output-file requirements_test.txt requirements_test.ini
 #
--e git+https://github.com/steadysupply/directory-api-client.git@dd69c34#egg=directory_api_client
--e git+https://github.com/steadysupply/directory-constants.git@7ce7601#egg=directory_constants
--e git+https://github.com/steadysupply/directory-validators.git@2014bd7#egg=directory_validators
--e git+https://github.com/steadysupply/directory-signature-auth.git@7c5b118#egg=sigauth
+-e git+https://github.com/steadysupply/directory-api-client.git@9eab197#egg=directory_api_client
+-e git+https://github.com/steadysupply/directory-constants.git@84b0b2f#egg=directory_constants
+-e git+https://github.com/steadysupply/directory-validators.git@70e7683#egg=directory_validators
+-e git+https://github.com/steadysupply/directory-signature-auth.git@7571ce2#egg=sigauth
 boto3==1.4.1
 botocore==1.4.93          # via boto3, s3transfer
 cachetools==2.0.0         # via zenpy
@@ -15,7 +15,7 @@ codecov==2.0.9
 contextlib2==0.5.5        # via raven
 coverage==4.4.1           # via codecov, pytest-cov
 django-storages==1.5.1
-django==1.10.7            # via django-recaptcha
+django==1.11.4            # via django-recaptcha
 django_recaptcha==1.2.0
 djangorestframework==3.4.7
 docutils==0.14            # via botocore
@@ -38,6 +38,7 @@ pytest-django==3.0.0
 pytest-sugar==0.8.0
 pytest==3.0.2
 python-dateutil==2.6.0    # via botocore, freezegun, zenpy
+pytz==2017.2              # via django
 raven==5.19.0
 redis==2.10.5
 requests==2.11.1
