@@ -1,5 +1,4 @@
-import difflib
-
+from bs4 import BeautifulSoup
 from django import forms
 from company import widgets
 
@@ -31,15 +30,18 @@ def test_mutiple_choice_checkbox_with_inline_label():
       <td>
         <ul id="id_field" class="form-field checkbox">
           <li>
-              <input type="checkbox" name="field" value="1" id="id_field_0" class="form-field checkbox" />
+              <input type="checkbox" name="field"
+                value="1" id="id_field_0" class="form-field checkbox" />
               <label for="id_field_0">one</label>
           </li>
           <li>
-              <input type="checkbox" name="field" value="2" id="id_field_1" class="form-field checkbox" />
+              <input type="checkbox" name="field"
+                value="2" id="id_field_1" class="form-field checkbox" />
               <label for="id_field_1">two</label>
           </li>
           <li>
-              <input type="checkbox" name="field" value="3" id="id_field_2" class="form-field checkbox" />
+              <input type="checkbox" name="field"
+                value="3" id="id_field_2" class="form-field checkbox" />
               <label for="id_field_2">three</label>
           </li>
         </ul>
@@ -47,11 +49,6 @@ def test_mutiple_choice_checkbox_with_inline_label():
     </tr>
     """
 
-    comparitor = difflib.SequenceMatcher(
-        a=minify_html(expected_html),
-        b=minify_html(str(form))
-    )
-
-    # since order of HTML attributes is not guarantees,
-    # we accept a weaker test
-    assert comparitor.ratio() >= 0.8349705304518664
+    soup_left = BeautifulSoup(minify_html(expected_html), 'html.parser')
+    soup_right = BeautifulSoup(minify_html(str(form)), 'html.parser')
+    assert soup_left == soup_right
